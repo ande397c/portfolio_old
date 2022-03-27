@@ -10,6 +10,11 @@ function ready() {
   burger.addEventListener("mouseover", over);
 
   burger.addEventListener("mouseout", done);
+  const logo = document.querySelector(".logo");
+
+  logo.addEventListener("click", () => {
+    location.replace("index.html");
+  });
 }
 
 function toggle() {

@@ -1,0 +1,132 @@
+#project_main {
+  padding-left: 1rem;
+}
+
+.back {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 2rem;
+  margin: 2rem;
+  border-radius: 10px;
+  background-color: var(--color-cta1);
+  color: var(--color-text);
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+  width: 3rem;
+  height: 3rem;
+  padding-left: 1.1rem;
+  padding-top: 0.35rem;
+}
+
+#project_main h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#text_section h2 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+#text_section ul li {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  padding-block: 0.5rem;
+}
+
+.project_list {
+  padding-left: 1rem;
+}
+
+.project_link {
+  margin-top: 1rem;
+}
+
+.project_link a {
+  color: var(--color-cta1);
+  font-size: 1.2rem;
+}
+
+#project_top-section {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 10rem;
+}
+
+.mockup_container {
+  margin-top: 2rem;
+}
+
+#gallery_section h2 {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+#gallery_section h3 {
+  font-size: 1.4rem;
+}
+
+.theme_span {
+  color: #9696a3;
+}
+
+.first_gallery_img {
+  grid-column: 1/3;
+}
+
+.img_gallery img {
+  margin-top: 2rem;
+}
+
+.back_next {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+}
+
+.next_project {
+  font-size: 1.3rem;
+  color: var(--color-cta2);
+  cursor: pointer;
+}
+
+.previous_project {
+  font-size: 1.3rem;
+  color: var(--color-cta2);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 850px) {
+  #project_top-section {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 1rem;
+  }
+
+  .img_gallery img {
+    height: auto;
+    width: 100%;
+  }
+
+  .img_gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2rem;
+    margin-inline: 5rem;
+  }
+
+  .gallery_top-section {
+    margin-left: 5rem;
+  }
+
+  .back_next {
+    margin-left: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  #project_top-section {
+    padding-inline: 5rem;
+  }
+}

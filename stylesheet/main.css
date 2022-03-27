@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ...............Color variables ............... */
+/* ...............variables ............... */
 
 :root {
   --color-body: #252728;
@@ -56,108 +56,6 @@ p {
   max-width: 45ch;
   line-height: 1.7rem;
   font-size: 1.2rem;
-}
-
-/*  .......... Nav......... */
-
-.nav_container {
-  min-height: 20vh;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
-  position: relative;
-  z-index: 11;
-  transition: all 0.5s;
-}
-
-.nav_links {
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
-  margin-left: auto;
-}
-
-.nav_container li {
-  display: table-cell;
-  position: relative;
-  padding: 15px 0;
-}
-
-.nav_container a {
-  color: var(--color-text);
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  text-decoration: none;
-  letter-spacing: 0.15em;
-  display: inline-block;
-  padding: 5px 0px;
-  position: relative;
-}
-
-/* ................. nav hover .......... */
-
-.nav_container a:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-
-.nav_container a:hover {
-  font-weight: 500;
-}
-
-.nav_container a:hover:after {
-  width: 100%;
-  left: 0;
-}
-.active {
-  font-weight: 500 !important;
-}
-
-.active::after {
-  width: 100% !important;
-  left: 0 !important;
-}
-
-/*  .......... logo ......... */
-
-.logo {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 16px;
-  color: var(--color-text);
-  transition: ease-in 0.1s;
-  cursor: pointer;
-  padding-left: 1rem;
-  position: relative;
-  z-index: 100;
-}
-
-/*  .......... Burger ......... */
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  margin: 5px;
-  background-color: var(--color-text);
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.burger {
-  cursor: pointer;
-  display: none;
 }
 
 /* ................. h1 .......... */
@@ -303,15 +201,15 @@ nav {
 /* .......... About intro section ................ */
 
 #about_intro {
-  padding-inline: 6rem;
+  padding-inline: 3rem;
   display: grid;
-  justify-items: center;
+  justify-content: center;
   margin-bottom: 6rem;
 }
 
 #about_intro h2 {
   padding-bottom: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 .cta_about {
@@ -335,13 +233,17 @@ nav {
   color: var(--color-cta2);
 }
 
-.cta_about:hover::after {
+.cta_about:hover {
+  cursor: pointer;
+}
+
+/* .cta_about p:hover::after {
   -webkit-transform: translateX(5px);
   -moz-transform: translateX(5px);
   -ms-transform: translateX(5px);
   -o-transform: translateX(5px);
   transform: translateX(5px);
-}
+} */
 
 /* .......... Footer ................ */
 
@@ -441,70 +343,17 @@ footer h2 {
   right: 0;
 }
 
-@media only screen and (max-width: 700px) {
-  .nav_links {
-    position: absolute;
-    right: 0px;
-    height: 100vh;
-    top: 0vh;
-    background-color: #010005;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    transform: translateX(100%);
-    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
-    z-index: 10;
-    justify-content: flex-start;
-    padding-top: 5rem;
-    font-size: 2rem;
-    gap: 3rem;
-  }
-
-  .burger {
-    display: block;
-    margin-top: 10px;
-    margin-left: auto;
-    padding-right: 20px;
-    z-index: 99;
-  }
-
-  .nav_toggle {
-    transform: translateX(0%);
-  }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: var(--color-cta2);
-  }
-  .toggle .line2 {
-    opacity: 0;
-  }
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-    background-color: var(--color-cta2);
-  }
-
-  .hover .line1 {
-    transform: translateY(-3px);
-    transition: all 0.3s;
-    background-color: var(--color-cta2);
-  }
-  .hover .line2 {
-    opacity: 0;
-    transition: all 0.3s;
-    background-color: var(--color-cta2);
-  }
-  .hover .line3 {
-    transform: translateY(3px);
-    transition: all 0.3s;
-    background-color: var(--color-cta2);
-  }
-}
-
 @media only screen and (min-width: 768px) {
   .h1_container {
     display: grid;
     justify-content: center;
+    padding-left: 10rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
   }
 }
