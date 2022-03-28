@@ -4,7 +4,98 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&family=Lato&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,500&family=Righteous&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="stylesheet/project.css" />
+    <link rel="stylesheet" href="stylesheet/nav.css" />
+
+    <link rel="stylesheet" href="stylesheet/main.css" />
+
+    <!-- Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+
     <title>Hacked Hogwarts</title>
   </head>
-  <body></body>
+  <body>
+    <div class="nav_container">
+      <nav>
+        <div class="logo">
+          <h3>Logo</h3>
+        </div>
+
+        <ul class="nav_links">
+          <li>
+            <a href="index.html#work_section">Projects</a>
+          </li>
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li>
+            <a href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </div>
+
+    <main id="project_main">
+      <a href="index.html"> <div class="back">&#8249;</div></a>
+
+      <h1>Hacked Hogwarts</h1>
+
+      <section id="project_top-section">
+        <article id="text_section">
+          <h2>Introduction</h2>
+          <p>This project was the first mandatory assignment on the Frontend Design elective. The assignment had a fairly long list of requirements. Here are some of the main ones:</p>
+
+          <ul class="project_list">
+            <li>The user must be able to filter, sort and search for a student</li>
+            <li>The user must be able to expel students and asign students to different roles.</li>
+            <li>The system can be 'hacked' (double clicking on the h1), affecting blood-status algorithm, injected me in the student list and other fun stuff.</li>
+          </ul>
+
+          <div class="project_link">
+            <a href="www.test.com">Link to solution</a>
+          </div>
+        </article>
+        <div class="mockup_container">
+          <img src="assets/project/hogwarts_mockup.png" alt="hogwarts mockup" />
+        </div>
+      </section>
+
+      <section id="gallery_section">
+        <div class="gallery_top-section">
+          <h2>Gallery</h2>
+          <h3>
+            <span class="theme_span">Just Javascript</span>
+            <span class="sem_span"> / 3.sem</span>
+          </h3>
+        </div>
+        <div class="img_gallery">
+          <img class="first_gallery_img" src="assets/project/hogwarts_gallery-1.png" alt="hogwarts gallery" />
+          <img src="assets/project/hogwarts_gallery-2.png" alt="hogwarts gallery" />
+          <img src="assets/project/hogwarts_gallery-3.png" alt="hogwarts gallery" />
+        </div>
+      </section>
+
+      <div class="back_next">
+        <p class="previous_project"><span>&#8249;</span>Previous project</p>
+        <p class="next_project">Next project <span>&#8250;</span></p>
+      </div>
+    </main>
+
+    <script src="script/nav.js"></script>
+  </body>
 </html>

@@ -1,7 +1,46 @@
+#about_main {
+  margin-inline: 1rem;
+}
+
 .h1_about {
   margin-bottom: 3rem;
 }
 
 .h1_about h1 {
   text-align: center;
+}
+
+#skills {
+  margin-top: 4rem;
+}
+
+#skills h2 {
+  text-align: left;
+}
+
+.skill_container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.skill-circle {
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: var(--color-text);
+  text-align: center;
+  border: 3px solid #52b0a3;
+}
+
+#documents {
+  margin-top: 10vh;
+}
+
+#documents h2 {
+  text-align: left;
 }

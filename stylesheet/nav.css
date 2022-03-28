@@ -79,7 +79,7 @@ nav {
   color: var(--color-text);
   transition: ease-in 0.1s;
   cursor: pointer;
-  padding-left: 1rem;
+  padding-left: 2.1rem;
   position: relative;
   z-index: 100;
 }

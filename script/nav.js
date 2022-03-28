@@ -15,6 +15,26 @@ function ready() {
   logo.addEventListener("click", () => {
     location.replace("index.html");
   });
+
+  const currentLocation = location.href;
+  let menuItem = document.querySelectorAll(".nav_links a");
+  const menuLength = menuItem.length;
+
+  for (let i = 0; i < menuLength; i++) {
+    if (menuItem[i].href === currentLocation) {
+      menuItem[i].className = "active";
+    }
+  }
+
+  // let menuItems = document.querySelectorAll(".nav_links a");
+
+  // menuItems.forEach((menuItem) => {
+  //   menuItem.addEventListener("click", function () {
+  //     console.log("currentLocation");
+  //     menuItems.forEach((a) => a.classList.remove("active"));
+  //     this.classList.add("active");
+  //   });
+  // });
 }
 
 function toggle() {

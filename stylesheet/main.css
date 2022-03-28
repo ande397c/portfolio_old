@@ -109,6 +109,24 @@ p {
   }
 }
 
+.bouncing2 {
+  animation-name: bouncing2_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes bouncing2_kf {
+  from {
+    transform: translateY(1vw);
+  }
+
+  to {
+    transform: translateY(2vw);
+  }
+}
+
 /* .......... Work / Card section ................ */
 
 #work_section {
@@ -117,6 +135,7 @@ p {
 
 #work_section h2 {
   padding-bottom: 3rem;
+  padding-inline: 1.5rem;
 }
 
 #card_container {
