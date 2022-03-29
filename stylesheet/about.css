@@ -34,7 +34,14 @@
   font-size: 1rem;
   color: var(--color-text);
   text-align: center;
-  border: 3px solid #52b0a3;
+  border: 3px solid var(--color-cta1);
+  transition: 0.3s all ease-out;
+}
+
+.skill-circle:hover {
+  border: 3px solid var(--color-cta2);
+  cursor: pointer;
+  transform: translateY(-10px);
 }
 
 #documents {

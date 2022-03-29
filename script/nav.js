@@ -26,15 +26,9 @@ function ready() {
     }
   }
 
-  // let menuItems = document.querySelectorAll(".nav_links a");
-
-  // menuItems.forEach((menuItem) => {
-  //   menuItem.addEventListener("click", function () {
-  //     console.log("currentLocation");
-  //     menuItems.forEach((a) => a.classList.remove("active"));
-  //     this.classList.add("active");
-  //   });
-  // });
+  for (var i = 0; i < menuItem.length; i++) {
+    menuItem[i].addEventListener("click", removeOverflow);
+  }
 }
 
 function toggle() {
@@ -54,4 +48,10 @@ function over() {
 }
 function done() {
   burger.classList.remove("hover");
+}
+
+function removeOverflow() {
+  document.body.style.overflowY = "visible";
+  links.classList.remove("nav_toggle");
+  burger.classList.remove("toggle");
 }

@@ -71,7 +71,7 @@ p {
 /* ...............frontpage arrow ............... */
 
 .arrow_splash {
-  padding-block: 3rem;
+  padding-block: 14rem;
 }
 
 .arrow_splash img {
@@ -90,6 +90,20 @@ p {
 }
 
 /*  .......... Animationer ......... */
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
 
 .bouncing {
   animation-name: bouncing_kf;
@@ -239,30 +253,25 @@ p {
   color: var(--color-cta2);
   display: inline-block;
   text-align: left;
+  transition: 0.3s ease-out;
 }
 
 .cta_about p::after {
   padding-left: 8px;
   content: "\0279E";
-  -webkit-transition: transform 0.3s ease-out;
-  -moz-transition: transform 0.3s ease-out;
-  -ms-transition: transform 0.3s ease-out;
-  -o-transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
+  /* transition: transform 0.3s ease-out; */
   color: var(--color-cta2);
 }
 
-.cta_about:hover {
+.cta_about p:hover {
   cursor: pointer;
+  letter-spacing: 0.1rem;
 }
 
-/* .cta_about p:hover::after {
-  -webkit-transform: translateX(5px);
-  -moz-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  -o-transform: translateX(5px);
-  transform: translateX(5px);
-} */
+.cta_about p:hover::after {
+  padding-left: 15px;
+  transition: transform 1s ease-out;
+}
 
 /* .......... Footer ................ */
 
@@ -333,23 +342,42 @@ footer h2 {
 
 /* .......... cta to top ................ */
 
-#customID {
+.cta {
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 3rem;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  width: 3rem;
   position: fixed;
   bottom: 20px;
   z-index: 99;
-  border: none;
-  outline: none;
-  transition: all 0.3s;
   background-color: var(--color-cta1);
   cursor: pointer;
-  border-radius: 50%;
+  transition: all 0.3s;
   margin-right: 1rem;
-  text-align: center;
+}
+
+.cta .arrowUp::before {
+  border: solid var(--color-text);
+  border-width: 5px 5px 0 0;
+  content: "";
   display: block;
-  width: 3rem;
-  height: 3rem;
-  font-size: 2.6rem;
-  color: var(--color-text);
+  height: 10px;
+  position: relative;
+  top: 2px;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 10px;
+}
+
+.cta:hover {
+  transform: translateY(-10px);
 }
 
 .hide {
@@ -367,12 +395,23 @@ footer h2 {
     display: grid;
     justify-content: center;
     padding-left: 10rem;
+    max-width: 150ch;
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   h2 {
     font-size: 3rem;
+  }
+
+  .arrow_splash {
+    padding-block: 7rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .arrow_splash {
+    padding-block: 20rem;
   }
 }
