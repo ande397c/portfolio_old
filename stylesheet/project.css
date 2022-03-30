@@ -84,7 +84,7 @@
   margin-top: 4rem;
   display: flex;
   justify-content: space-between;
-
+  padding-inline: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -94,10 +94,30 @@
   cursor: pointer;
 }
 
+.next_project span {
+  transition: 0.3s ease-out;
+}
+
+.next_project:hover span {
+  padding-left: 7px;
+}
+
 .previous_project {
   font-size: 1.3rem;
   color: var(--color-cta2);
   cursor: pointer;
+}
+
+.previous_project span {
+  transition: 0.3s ease-out;
+}
+
+.previous_project:hover span {
+  padding-right: 7px;
+}
+
+.back_next a {
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 850px) {
@@ -131,6 +151,10 @@
 
   .back_next {
     margin-inline: 5rem;
+  }
+
+  .back_next {
+    padding-inline: 0;
   }
 }
 

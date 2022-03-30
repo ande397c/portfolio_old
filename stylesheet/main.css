@@ -45,6 +45,10 @@ h2 {
   font-size: 2rem;
 }
 
+.logo h3 {
+  font-family: "Poppins", sans-serif;
+}
+
 h3 {
   color: var(--color-text);
   font-family: "Lato", sans-serif;
@@ -71,7 +75,7 @@ p {
 /* ...............frontpage arrow ............... */
 
 .arrow_splash {
-  padding-block: 14rem;
+  padding-block: 3.5rem;
 }
 
 .arrow_splash img {
@@ -157,6 +161,7 @@ p {
   gap: 5rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 5rem;
 }
 
 .card {
@@ -242,7 +247,7 @@ p {
 
 #about_intro h2 {
   padding-bottom: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .cta_about {
@@ -259,18 +264,12 @@ p {
 .cta_about p::after {
   padding-left: 8px;
   content: "\0279E";
-  /* transition: transform 0.3s ease-out; */
   color: var(--color-cta2);
 }
 
 .cta_about p:hover {
   cursor: pointer;
-  letter-spacing: 0.1rem;
-}
-
-.cta_about p:hover::after {
-  padding-left: 15px;
-  transition: transform 1s ease-out;
+  letter-spacing: 0.03rem;
 }
 
 /* .......... Footer ................ */
@@ -333,6 +332,11 @@ footer h2 {
   color: var(--color-cta1);
   transition: all 0.2s ease;
 }
+.wrapper ul li:hover .fa-linkedin {
+  color: var(--color-cta1);
+  transition: all 0.2s ease;
+}
+
 .footer_name {
   margin-top: 2rem;
   padding: 1rem;
@@ -406,12 +410,27 @@ footer h2 {
   }
 
   .arrow_splash {
-    padding-block: 7rem;
+    padding-block: 0rem;
+  }
+
+  #about_intro h2 {
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  #card_container {
+    justify-content: start;
+    margin-inline: 5rem;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .arrow_splash {
-    padding-block: 20rem;
+    padding-block: 10rem;
+  }
+
+  #card_container {
+    justify-content: center;
+    gap: 9rem;
   }
 }

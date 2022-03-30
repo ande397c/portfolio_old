@@ -22,7 +22,7 @@
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: start;
   gap: 2rem;
 }
 
@@ -50,4 +50,10 @@
 
 #documents h2 {
   text-align: left;
+}
+
+@media only screen and (min-width: 1000px) {
+  #about_main {
+    margin-inline: 4rem;
+  }
 }

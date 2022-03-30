@@ -101,7 +101,8 @@
   animation-duration: 11s;
 }
 
-.nav_container {
+.nav_container,
+.nav_container_project {
   min-height: 12vh;
 }
 
@@ -171,18 +172,51 @@ nav {
   left: 0 !important;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-secondary);
+  transition: all 1s;
+  box-shadow: 7px 7px 10px 1px rgba(122, 120, 120, 0.25);
+  min-height: 0;
+}
+
+.toggle_nav {
+  animation-name: toggle_nav_kf;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes toggle_nav_kf {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
 /*  .......... logo ......... */
 
 .logo {
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--color-text);
   transition: ease-in 0.1s;
   cursor: pointer;
-  padding-left: 2.1rem;
+  padding-left: 2rem;
   position: relative;
   z-index: 100;
+  padding-top: 0.7rem;
+  transition: all 0.3s ease-in;
+}
+
+.logo:hover.logo h3 {
+  color: var(--color-secondary);
+  -webkit-text-stroke: 1px var(--color-text);
 }
 
 /*  .......... Burger ......... */
