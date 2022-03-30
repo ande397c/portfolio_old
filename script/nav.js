@@ -35,9 +35,11 @@ function toggle() {
   if (burger.classList.contains("toggle")) {
     burger.addEventListener("mouseover", over);
     document.body.style.overflowY = "visible";
+    document.querySelector(".h1_container").style.visibility = "visible";
   } else {
     burger.removeEventListener("mouseover", over);
     document.body.style.overflow = "hidden";
+    document.querySelector(".h1_container").style.visibility = "hidden";
   }
   links.classList.toggle("nav_toggle");
   burger.classList.toggle("toggle");
@@ -52,6 +54,8 @@ function done() {
 
 function removeOverflow() {
   document.body.style.overflowY = "visible";
+  document.querySelector(".h1_container").style.visibility = "visible";
+
   links.classList.remove("nav_toggle");
   burger.classList.remove("toggle");
 }
