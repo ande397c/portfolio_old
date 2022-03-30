@@ -93,7 +93,7 @@ p {
   display: block;
 }
 
-/*  .......... Animationer ......... */
+/*  .......... Animations ......... */
 
 @keyframes animate {
   0% {
@@ -290,7 +290,7 @@ footer h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 2rem;
+  padding-block: 2rem;
 }
 
 .wrapper ul {
@@ -337,14 +337,22 @@ footer h2 {
   transition: all 0.2s ease;
 }
 
-.footer_name {
+.footer_info {
   margin-top: 2rem;
-  padding: 1rem;
   position: relative;
   bottom: 0;
+  display: grid;
+  justify-items: center;
 }
 
-/* .......... cta to top ................ */
+.footer_info p {
+  margin-top: 0.5rem;
+}
+.footer_info p:nth-child(1) {
+  font-weight: bold;
+}
+
+/* .......... CTA to top ................ */
 
 .cta {
   -webkit-align-items: center;
@@ -419,7 +427,7 @@ footer h2 {
   }
 
   #card_container {
-    justify-content: start;
+    /* justify-content: start; */
     margin-inline: 5rem;
   }
 }
@@ -430,7 +438,7 @@ footer h2 {
   }
 
   #card_container {
-    justify-content: center;
+    /* justify-content: center; */
     gap: 9rem;
   }
 }

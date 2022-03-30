@@ -6,6 +6,8 @@ const burger = document.querySelector(".burger");
 const links = document.querySelector(".nav_links");
 
 function ready() {
+  window.addEventListener("scroll", toggleNav);
+
   burger.addEventListener("click", toggle);
   burger.addEventListener("mouseover", over);
 
@@ -28,6 +30,25 @@ function ready() {
 
   for (var i = 0; i < menuItem.length; i++) {
     menuItem[i].addEventListener("click", removeOverflow);
+  }
+  addAnimations();
+}
+
+function addAnimations() {
+  // Animation project
+  gsap.from("#project_top-section", { scrollTrigger: "#project_top-section", duration: 0.4, delay: 0.5, y: "30rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "end" } });
+
+  gsap.from("#gallery_section", { scrollTrigger: "#gallery_section", duration: 0.5, delay: 0.2, y: "30rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "end" } });
+}
+
+function toggleNav() {
+  let windowY = window.scrollY;
+  const header = document.querySelector(".nav_container");
+
+  if (windowY >= 800) {
+    header.classList.add("sticky", "toggle_nav");
+  } else {
+    header.classList.remove("sticky", "toggle_nav");
   }
 }
 

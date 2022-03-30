@@ -6,6 +6,8 @@ const burger = document.querySelector(".burger");
 const links = document.querySelector(".nav_links");
 
 function ready() {
+  window.addEventListener("scroll", toggleNav);
+
   burger.addEventListener("click", toggle);
   burger.addEventListener("mouseover", over);
 
@@ -28,6 +30,17 @@ function ready() {
 
   for (var i = 0; i < menuItem.length; i++) {
     menuItem[i].addEventListener("click", removeOverflow);
+  }
+}
+
+function toggleNav() {
+  let windowY = window.scrollY;
+  const header = document.querySelector(".nav_container");
+
+  if (windowY >= 800) {
+    header.classList.add("sticky", "toggle_nav");
+  } else {
+    header.classList.remove("sticky", "toggle_nav");
   }
 }
 

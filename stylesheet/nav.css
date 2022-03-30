@@ -180,12 +180,14 @@ nav {
   transition: all 1s;
   box-shadow: 7px 7px 10px 1px rgba(122, 120, 120, 0.25);
   min-height: 0;
+  z-index: 22;
 }
 
 .toggle_nav {
   animation-name: toggle_nav_kf;
   animation-duration: 0.3s;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 22;
 }
 
 @keyframes toggle_nav_kf {
@@ -216,7 +218,7 @@ nav {
 
 .logo:hover.logo h3 {
   color: var(--color-secondary);
-  -webkit-text-stroke: 1px var(--color-text);
+  -webkit-text-stroke: 0.5px var(--color-text);
 }
 
 /*  .......... Burger ......... */
