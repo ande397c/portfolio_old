@@ -18,6 +18,55 @@ body {
   overflow-x: hidden;
 }
 
+/* ...............Preloader ............... */
+
+.preloader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: var(--color-body);
+}
+
+.preloader {
+  width: 30vw;
+  height: 30vw;
+  margin: 0;
+  background: transparent;
+  border-top: 5px solid var(--color-text);
+
+  border-radius: 50%;
+  -webkit-animation: 1s spin linear infinite;
+  animation: 1s spin linear infinite;
+
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 /* ...............variables ............... */
 
 :root {
@@ -236,6 +285,21 @@ p {
   transform: translateX(5px);
 }
 
+/* .......... github intro section ................ */
+
+#github {
+  padding-inline: 3rem;
+  display: grid;
+  justify-content: center;
+  margin-block: 8rem;
+  padding-right: 5.5rem;
+}
+
+#github h2 {
+  padding-bottom: 1rem;
+  text-align: left;
+}
+
 /* .......... About intro section ................ */
 
 #about_intro {
@@ -421,9 +485,14 @@ footer h2 {
     padding-block: 0rem;
   }
 
+  #github h2 {
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+
   #about_intro h2 {
     padding-bottom: 1rem;
-    text-align: center;
+    text-align: left;
   }
 
   #card_container {
@@ -439,6 +508,6 @@ footer h2 {
 
   #card_container {
     /* justify-content: center; */
-    gap: 9rem;
+    gap: 5rem;
   }
 }

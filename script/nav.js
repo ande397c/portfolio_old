@@ -13,7 +13,7 @@ function ready() {
   const logo = document.querySelector(".logo");
 
   logo.addEventListener("click", () => {
-    location.replace("../index.html");
+    location.replace("index.html");
   });
 
   const currentLocation = location.href;
@@ -36,10 +36,12 @@ function toggle() {
     burger.addEventListener("mouseover", over);
     document.body.style.overflowY = "visible";
     document.querySelector(".h1_container").style.visibility = "visible";
+    document.querySelector(".arrow_splash").style.visibility = "visible";
   } else {
     burger.removeEventListener("mouseover", over);
     document.body.style.overflow = "hidden";
     document.querySelector(".h1_container").style.visibility = "hidden";
+    document.querySelector(".arrow_splash").style.visibility = "hidden";
   }
   links.classList.toggle("nav_toggle");
   burger.classList.toggle("toggle");
@@ -55,6 +57,7 @@ function done() {
 function removeOverflow() {
   document.body.style.overflowY = "visible";
   document.querySelector(".h1_container").style.visibility = "visible";
+  document.querySelector(".arrow_splash").style.visibility = "visible";
 
   links.classList.remove("nav_toggle");
   burger.classList.remove("toggle");

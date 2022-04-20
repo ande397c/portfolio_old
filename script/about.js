@@ -15,7 +15,7 @@ function ready() {
   const logo = document.querySelector(".logo");
 
   logo.addEventListener("click", () => {
-    location.replace("../index.html");
+    location.replace("index.html");
   });
 
   const currentLocation = location.href;

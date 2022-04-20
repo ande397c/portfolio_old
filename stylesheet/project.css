@@ -33,6 +33,10 @@
   margin-bottom: 1rem;
 }
 
+#text_section p a {
+  color: white;
+}
+
 #text_section ul li {
   color: var(--color-text);
   font-size: 1.2rem;
