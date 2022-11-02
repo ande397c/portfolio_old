@@ -15,6 +15,9 @@ img {
 
 body {
   background-color: var(--color-body);
+}
+
+.body-wrapper {
   overflow-x: hidden;
 }
 
@@ -388,11 +391,8 @@ footer h2 {
   color: var(--color-cta1);
   transition: all 0.2s ease;
 }
-.wrapper ul li:hover .fa-facebook {
-  color: var(--color-cta1);
-  transition: all 0.2s ease;
-}
-.wrapper ul li:hover .fa-instagram {
+
+.wrapper ul li:hover .fa-github {
   color: var(--color-cta1);
   transition: all 0.2s ease;
 }
@@ -509,5 +509,10 @@ footer h2 {
   #card_container {
     /* justify-content: center; */
     gap: 5rem;
+  }
+
+  p {
+    line-height: 1.8rem;
+    font-size: 1.3rem;
   }
 }

@@ -53,7 +53,6 @@
 
 .skill-circle:hover {
   border: 3px solid var(--color-cta2);
-  cursor: pointer;
   transform: translateY(-10px);
 }
 
@@ -77,10 +76,23 @@
   .about_img_container {
     margin-top: 0;
   }
+
+  .about_img_container img {
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   #about_main {
     margin-inline: 4rem;
+  }
+
+  .about_img_container img {
+    max-width: 80%;
   }
 }

@@ -178,9 +178,10 @@ nav {
   width: 100%;
   background-color: var(--color-secondary);
   transition: all 1s;
-  box-shadow: 7px 7px 10px 1px rgba(122, 120, 120, 0.25);
+  box-shadow: 7px 7px 10px 1px rgb(122 120 120 / 15%);
   min-height: 0;
   z-index: 22;
+  border-bottom: 1px solid #f5f0f02e;
 }
 
 .toggle_nav {
@@ -212,7 +213,6 @@ nav {
   padding-left: 2rem;
   position: relative;
   z-index: 100;
-  padding-top: 0.7rem;
   transition: all 0.3s ease-in;
 }
 
@@ -259,7 +259,6 @@ nav {
 
   .burger {
     display: block;
-    margin-top: 10px;
     margin-left: auto;
     padding-right: 20px;
     z-index: 99;

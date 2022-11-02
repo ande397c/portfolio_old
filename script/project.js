@@ -36,9 +36,8 @@ function ready() {
 
 function addAnimations() {
   // Animation project
-  gsap.from("#project_top-section", { scrollTrigger: "#project_top-section", duration: 0.4, y: "30rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "end" } });
-
-  gsap.from("#gallery_section", { scrollTrigger: "#gallery_section", duration: 0.5, delay: 0.2, y: "30rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "end" } });
+  gsap.from("#project_top-section", { duration: 0.4, y: "30rem", delay: 0.6, ease: Cubic.easeOut, stagger: { amount: 0.7, from: "end" } });
+  //gsap.from(".img_gallery", { scrollTrigger: ".project_list", duration: 0.5, y: "50rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "end" } });
 }
 
 function toggleNav() {

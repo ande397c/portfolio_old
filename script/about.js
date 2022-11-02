@@ -31,6 +31,15 @@ function ready() {
   for (var i = 0; i < menuItem.length; i++) {
     menuItem[i].addEventListener("click", removeOverflow);
   }
+
+  addAnimations();
+}
+
+function addAnimations() {
+  gsap.from(".text", { duration: 1, x: "-100rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "end" } });
+  gsap.from(".about_img_container", { delay: 0.3, duration: 1, x: "100rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "end" } });
+
+  gsap.from(".skill-circle", { scrollTrigger: ".skill-circle", delay: 0.1, duration: 0.5, y: "20rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "end" } });
 }
 
 function toggleNav() {
