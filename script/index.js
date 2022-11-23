@@ -7,7 +7,7 @@ window.addEventListener("load", setup);
 
 function setup() {
   loader.style.display = "none";
-  window.addEventListener("scroll", toggleNav);
+  //window.addEventListener("scroll", toggleNav);
   const arrow = document.querySelector(".arrow_splash");
 
   const h1 = document.querySelector("h1");
@@ -23,16 +23,16 @@ function setup() {
   addAnimations();
 }
 
-function toggleNav() {
-  let windowY = window.scrollY;
-  const header = document.querySelector(".nav_container");
+// function toggleNav() {
+//   let windowY = window.scrollY;
+//   const header = document.querySelector(".nav_container");
 
-  if (windowY >= 800) {
-    header.classList.add("sticky", "toggle_nav");
-  } else {
-    header.classList.remove("sticky", "toggle_nav");
-  }
-}
+//   if (windowY >= 800) {
+//     header.classList.add("sticky", "toggle_nav");
+//   } else {
+//     header.classList.remove("sticky", "toggle_nav");
+//   }
+// }
 
 function addAnimations() {
   // Animation nav
